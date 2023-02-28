@@ -10,7 +10,7 @@ inp_box.addEventListener("click",()=>{
 
 inp_box.addEventListener("keyup",(e)=>{
 
-    let wrd=inp_box.value;
+    let wrd=inp_box.value.trim();
     if(!wrd)
     {
         heading.innerText=0;    
