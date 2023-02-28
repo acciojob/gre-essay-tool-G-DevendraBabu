@@ -1,4 +1,3 @@
-//your code here
 let inp_box=document.getElementById("evaluatedText");
 let count=0;
 let heading=document.getElementById("wordCount");
@@ -9,13 +8,18 @@ inp_box.addEventListener("click",()=>{
 })
 
 
-inp_box.addEventListener("keydown",(e)=>{
+inp_box.addEventListener("keyup",(e)=>{
 
-    if(e.key==" ")
+    let wrd=inp_box.value;
+    if(!wrd)
     {
-        count ++;
-        // console.log("hello");
+        heading.innerText=0;    
+        return
     }
-    heading.innerText=count;
+    let words=wrd.split(" ");
+    console.log("len " + words.length);
+    
+    heading.innerText=words.length;
  
 })
+
